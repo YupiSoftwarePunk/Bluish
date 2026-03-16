@@ -14,3 +14,21 @@
 .glow-text {
     text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
 }
+
+@keyframes diagonal-pulse {
+    0%, 100% { 
+        opacity: 0.4; 
+        transform: scale(1) translate(0, 0); 
+        filter: blur(100px); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.4) translate(5%, 5%); 
+        filter: blur(70px); 
+    }
+}
+
+.animate-glow {
+    animation: diagonal-pulse 10s ease-in-out infinite;
+    mix-blend-mode: plus-lighter; 
+}

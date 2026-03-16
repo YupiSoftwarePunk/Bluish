@@ -1,12 +1,16 @@
 export function createHeader() {
     const header = document.createElement('header');
-    header.className = 'animate-pulse-slow text-center';
+    header.className = 'animate-pulse-slow text-center relative z-10';
 
     header.innerHTML = `
-        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter text-brand-accent glow-text">
+        <h1 class="text-7xl md:text-9xl font-black tracking-tighter 
+            bg-gradient-to-b from-white via-brand-accent to-blue-600 
+            bg-clip-text text-transparent glow-text">
             BLUISH
         </h1>
-        <p class="text-brand-muted uppercase tracking-[0.5em] text-sm mt-4">Father of Peace</p>
+        <p class="text-brand-accent/80 uppercase tracking-[0.6em] text-lg md:text-xl mt-1 font-light">
+            Father of Peace
+        </p>
     `;
 
     return header;

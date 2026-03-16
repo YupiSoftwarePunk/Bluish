@@ -1,4 +1,4 @@
-import './style.css' 
+import './styles/style.css' 
 import { createHeader } from './components/Header.js';
 import { createLyrics } from './components/Lyrics.js';
 import { createPlayer } from './components/Player.js';
