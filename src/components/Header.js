@@ -1,6 +1,7 @@
 export function createHeader() {
     const header = document.createElement('header');
     header.className = 'animate-pulse-slow text-center relative z-10';
+    header.id = 'groupName';
 
     header.innerHTML = `
         <h1 class="text-7xl md:text-9xl font-black tracking-tighter 
@@ -13,5 +14,6 @@ export function createHeader() {
         </p>
     `;
 
+    // header.className = 'animate-pulse-slow text-center transition-all duration-1000 ease-in-out';
     return header;
 }
