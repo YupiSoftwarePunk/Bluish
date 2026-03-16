@@ -1,0 +1,15 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #020617; 
+  color: white;
+}
+
+.glass-panel {
+  @apply bg-brand-dark/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+.glow-text {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+} */
