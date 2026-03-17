@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,4 +39,29 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
     transition-duration: 1500ms; 
+}
+
+#lyrics-display {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-out;
+}
+
+.glow-text {
+    filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.pixel-lyrics {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 15px rgba(56, 189, 248, 0.6);
+    letter-spacing: 0.05em;
 }

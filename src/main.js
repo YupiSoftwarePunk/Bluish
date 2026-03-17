@@ -8,7 +8,7 @@ const app = document.querySelector('#app');
 function render() {
     app.innerHTML = '';
     app.appendChild(createHeader());
-    app.appendChild(createLyrics());
+    // app.appendChild(createLyrics());
     app.appendChild(createPlayer());
 
     const button = document.querySelector('#play-btn');
@@ -22,13 +22,18 @@ function render() {
 
     audio.addEventListener('timeupdate', () => {
         const currentTime = audio.currentTime;
-        const currentLine = lyrics.findLast(line => currentTime >= getSeconds(line.time));
+        const currentLine = lyrics.findLast(line => currentTime >= line.time);
         
         if (currentLine && lyricsDisplay.textContent !== currentLine.text) {
             lyricsDisplay.style.opacity = '0';
+            lyricsDisplay.style.filter = 'blur(10px)';
+            lyricsDisplay.style.transform = 'translateX(-50%) translateY(10px)';
+
             setTimeout(() => {
                 lyricsDisplay.textContent = currentLine.text;
                 lyricsDisplay.style.opacity = '1';
+                lyricsDisplay.style.filter = 'blur(0.4px)';
+                lyricsDisplay.style.transform = 'translateX(-50%) translateY(0)';
             }, 300);
         }
     });

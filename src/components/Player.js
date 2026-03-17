@@ -7,7 +7,5 @@ export function createPlayer() {
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
         </button>
     `;
-
-    // section.className = 'glass-panel ... transition-all duration-1000 ease-in-out';
     return section;
 }

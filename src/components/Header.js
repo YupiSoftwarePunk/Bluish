@@ -13,7 +13,5 @@ export function createHeader() {
             Father of Peace
         </p>
     `;
-
-    // header.className = 'animate-pulse-slow text-center transition-all duration-1000 ease-in-out';
     return header;
 }
