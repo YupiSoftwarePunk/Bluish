@@ -9,13 +9,13 @@ export function createLyrics() {
     // `;
     // section.style.textShadow = '0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(255, 255, 255, 0.2)';
 
-    section.className = `
-        fixed bottom-8 left-1/2 -translate-x-1/2 z-50
-        w-full max-w-4xl h-16 px-4
-        flex items-center justify-center text-center
-        pointer-events-none select-none
-        pixel-lyrics text-2xl md:text-4xl
-    `;
+    // section.className = `
+    //     fixed bottom-8 left-1/2 -translate-x-1/2 z-50
+    //     w-full max-w-4xl h-16 px-4
+    //     flex items-center justify-center text-center
+    //     pointer-events-none select-none
+    //     pixel-lyrics text-2xl md:text-4xl
+    // `;
 
     return section;
 }
