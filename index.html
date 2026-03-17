@@ -10,14 +10,14 @@
         <link rel="stylesheet" href="./style.css">
     </head>
 
-    <body class="bg-brand-black text-white selection:bg-brand-accent/30 overflow-hidden">
+    <body class="bg-brand-black text-white selection:bg-brand-accent/30">   <!--overflow-hidden -->
 
         <div id="app" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"></div>
 
         <div class="fixed inset-0 overflow-hidden pointer-events-none z-[1]">
             <div id="ambient-glow" class="absolute inset-0 bg-cyan-500/5 opacity-0 transition-opacity duration-1000"></div>
-            <div class="absolute top-[-15%] left-[-15%] w-[30%] h-[30%] bg-cyan-500/25 blur-[100px] rounded-full animate-pulse-slow mix-blend-screen"></div>
-            <div class="absolute bottom-[-15%] right-[-15%] w-[30%] h-[30%] bg-emerald-500/20 blur-[100px] rounded-full animate-pulse-slow mix-blend-screen" style="animation-delay: 3s;"></div>
+            <div class="absolute top-[-5%] left-[-5%] w-[30%] h-[30%] bg-cyan-500/25 blur-[100px] rounded-full animate-pulse-slow mix-blend-screen"></div>
+            <div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] bg-emerald-500/20 blur-[100px] rounded-full animate-pulse-slow mix-blend-screen" style="animation-delay: 3s;"></div>
         </div>
 
         <video id="bg-video" class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none z-1" loop muted playsinline>
