@@ -2,20 +2,28 @@ import './styles/style.css'
 import { createHeader } from './components/Header.js';
 import { createLyrics, lyrics, getSeconds } from './components/Lyrics.js';
 import { createPlayer } from './components/Player.js';
-// import { createAboutSection, initScrollAnimations } from './components/About.js'
+import { createAboutSection, initScrollAnimations } from './components/About.js'
 import { backgroundeffect } from './components/BackgroundEffects.js';
+import { createFooter } from './components/Footer.js';
 
 const app = document.querySelector('#app');
+let isPlaying = false;
 
 function render() {
     app.innerHTML = '';
 
     const headerElement = createHeader();
     const playerElement = createPlayer();
+    const footer = createFooter();
+    const about = createAboutSection();
 
     app.appendChild(headerElement);
     app.appendChild(playerElement);
-    // app.appendChild(createLyrics());
+    app.appendChild(about);
+    app.appendChild(footer);
+    app.appendChild(createLyrics());
+
+    initScrollAnimations();
 
     const button = document.querySelector('#play-btn');
     const header = document.querySelector('header');
@@ -24,7 +32,7 @@ function render() {
     const bgVideo = document.querySelector('#bg-video');
     const playerContainer = button.parentElement; 
 
-    let isPlaying = false;
+    // let isPlaying = false;
 
     requestAnimationFrame(() => {
         setTimeout(() => {

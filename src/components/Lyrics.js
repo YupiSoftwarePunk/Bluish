@@ -1,21 +1,21 @@
 export function createLyrics() {
     const section = document.createElement('section');
     section.id = 'lyrics-display';
-    // section.className = `
-    //     relative z-20 h-24 px-6 flex items-center justify-center 
-    //     text-center transition-opacity duration-500 ease-in-out
-    //     text-blue-400 font-medium text-xl md:text-2xl
-    //     tracking-wide leading-relaxed
-    // `;
-    // section.style.textShadow = '0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(255, 255, 255, 0.2)';
+    section.className = `
+        relative z-20 h-24 px-6 flex items-center justify-center 
+        text-center transition-opacity duration-500 ease-in-out
+        text-blue-400 font-medium text-xl md:text-2xl
+        tracking-wide leading-relaxed
+    `;
+    section.style.textShadow = '0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(255, 255, 255, 0.2)';
 
-    // section.className = `
-    //     fixed bottom-8 left-1/2 -translate-x-1/2 z-50
-    //     w-full max-w-4xl h-16 px-4
-    //     flex items-center justify-center text-center
-    //     pointer-events-none select-none
-    //     pixel-lyrics text-2xl md:text-4xl
-    // `;
+    section.className = `
+        fixed bottom-8 left-1/2 -translate-x-1/2 z-50
+        w-full max-w-4xl h-16 px-4
+        flex items-center justify-center text-center
+        pointer-events-none select-none
+        pixel-lyrics text-2xl md:text-4xl
+    `;
 
     return section;
 }

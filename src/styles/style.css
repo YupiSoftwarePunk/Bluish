@@ -74,12 +74,12 @@
 @keyframes pulse-gentle {
     0%, 100% {
         transform: scale(1);
-        opacity: 0.4; /* Было 0.2 */
+        opacity: 0.4;
         filter: blur(100px);
     }
     50% {
         transform: scale(1.2); 
-        opacity: 0.7; /* Было 0.4 — теперь в пике будет реально ярко */
+        opacity: 0.7; 
         filter: blur(80px);    
     }
 }
@@ -101,3 +101,16 @@
 
 .animate-float-slow { animation: float-slow 15s ease-in-out infinite; }
 .animate-float-reverse { animation: float-reverse 18s ease-in-out infinite; }
+
+html, body {
+    scrollbar-width: none !important; 
+    -ms-overflow-style: none !important; 
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none !important; 
+    width: 0 !important;
+    height: 0 !important;
+}
