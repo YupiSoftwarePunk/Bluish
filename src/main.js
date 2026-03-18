@@ -16,23 +16,24 @@ function render() {
     const playerElement = createPlayer();
     const footer = createFooter();
     const about = createAboutSection();
+    const lyricsElement = createLyrics();
 
     app.appendChild(headerElement);
     app.appendChild(playerElement);
     app.appendChild(about);
     app.appendChild(footer);
-    app.appendChild(createLyrics());
+
+    app.appendChild(lyricsElement);
 
     initScrollAnimations();
 
     const button = document.querySelector('#play-btn');
     const header = document.querySelector('header');
+
     const audio = document.querySelector('#main-track');
     const lyricsDisplay = document.querySelector('#lyrics-display');
     const bgVideo = document.querySelector('#bg-video');
     const playerContainer = button.parentElement; 
-
-    // let isPlaying = false;
 
     requestAnimationFrame(() => {
         setTimeout(() => {

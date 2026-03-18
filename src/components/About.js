@@ -34,28 +34,23 @@ export function createAboutSection() {
 }
 
 
-
 export function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Находим все анимируемые элементы ВНУТРИ этой секции
                 const children = entry.target.querySelectorAll('h2, div');
                 
                 children.forEach(el => {
                     el.classList.remove('opacity-0', 'translate-y-10', '-translate-x-10', 'translate-x-10');
                     el.classList.add('opacity-100', 'translate-y-0', 'translate-x-0');
                 });
-
-                // После того как секция появилась, её можно больше не слушать
                 observer.unobserve(entry.target);
             }
         });
     }, { 
-        threshold: 0.15 // Сработает, когда 15% всей секции About покажется на экране
+        threshold: 0.15 
     });
 
-    // Следим за всей секцией целиком, а не за отдельными h2/div
     const aboutSection = document.querySelector('section.max-w-4xl');
     if (aboutSection) observer.observe(aboutSection);
 }

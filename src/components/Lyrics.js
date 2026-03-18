@@ -17,6 +17,8 @@ export function createLyrics() {
         pixel-lyrics text-2xl md:text-4xl
     `;
 
+    section.style.textShadow = '0 0 15px rgba(96, 165, 250, 0.6), 0 0 5px rgba(255, 255, 255, 0.2)';
+
     return section;
 }
 
