@@ -3,15 +3,19 @@ import { createHeader } from './components/Header.js';
 import { createLyrics, lyrics, getSeconds } from './components/Lyrics.js';
 import { createPlayer } from './components/Player.js';
 // import { createAboutSection, initScrollAnimations } from './components/About.js'
-// import { backgroundeffect } from './components/BackgroundEffects.js';
+import { backgroundeffect } from './components/BackgroundEffects.js';
 
 const app = document.querySelector('#app');
 
 function render() {
     app.innerHTML = '';
-    app.appendChild(createHeader());
+
+    const headerElement = createHeader();
+    const playerElement = createPlayer();
+
+    app.appendChild(headerElement);
+    app.appendChild(playerElement);
     // app.appendChild(createLyrics());
-    app.appendChild(createPlayer());
 
     const button = document.querySelector('#play-btn');
     const header = document.querySelector('header');
@@ -22,16 +26,16 @@ function render() {
 
     let isPlaying = false;
 
-    // requestAnimationFrame(() => {
-    //     setTimeout(() => {
-    //         headerElement.classList.remove('opacity-0', 'translate-y-10');
-    //         headerElement.classList.add('opacity-100', 'translate-y-0');
-    //         setTimeout(() => {
-    //             playerElement.classList.remove('opacity-0', 'translate-y-10');
-    //             playerElement.classList.add('opacity-100', 'translate-y-0');
-    //         }, 300);
-    //     }, 100);
-    // });
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            headerElement.classList.remove('opacity-0', 'translate-y-10');
+            headerElement.classList.add('opacity-100', 'translate-y-0');
+            setTimeout(() => {
+                playerElement.classList.remove('opacity-0', 'translate-y-10');
+                playerElement.classList.add('opacity-100', 'translate-y-0');
+            }, 300);
+        }, 100);
+    });
 
     audio.addEventListener('timeupdate', () => {
         const currentTime = audio.currentTime;
@@ -54,7 +58,7 @@ function render() {
     button.addEventListener('click', () => {
         const ambientGlow = document.querySelector('#ambient-glow');
         if (!isPlaying) {
-            // backgroundeffect();
+            backgroundeffect();
 
             ambientGlow.classList.remove('opacity-0');
             ambientGlow.classList.add('opacity-100');

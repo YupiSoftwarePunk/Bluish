@@ -74,12 +74,12 @@
 @keyframes pulse-gentle {
     0%, 100% {
         transform: scale(1);
-        opacity: 0.2;
+        opacity: 0.4; /* Было 0.2 */
         filter: blur(100px);
     }
     50% {
-        transform: scale(1.15); 
-        opacity: 0.4;         
+        transform: scale(1.2); 
+        opacity: 0.7; /* Было 0.4 — теперь в пике будет реально ярко */
         filter: blur(80px);    
     }
 }
