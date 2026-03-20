@@ -60,3 +60,13 @@ npm run build
 
 * **Synchronized Lyrics**: Real-time lyric display mapped to audio timestamps.
 * **Glassmorphism UI**: Minimalist panels with backdrop-blur and neon accents.
+
+## UI
+
+## Music and video player
+
+<img src='src/assets/player.png' alt="player" width="500" height="300">
+
+## Section about group
+
+<img src='src/assets/about.png' alt="about" width="500" height="300">
