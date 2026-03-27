@@ -63,10 +63,10 @@ npm run build
 
 ## UI
 
-## Music and video player
+### Music and video player with subtitles
 
 <img src='src/assets/player.png' alt="player" width="500" height="300">
 
-## Section about group
+### Section about group
 
 <img src='src/assets/about.png' alt="about" width="500" height="300">
